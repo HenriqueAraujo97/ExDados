@@ -6,24 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonEnviar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginBottom="124dp"
-        android:text="Enviar"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="168dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/dados_do_utilizador"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.655" />
+
+    <TextView
+        android:id="@+id/textViewNome"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/nome"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTelefone"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextNome"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="20dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
@@ -31,24 +46,97 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
+        android:id="@+id/EditTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/editTextMail"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTelefone"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/telefone"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEmail"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/email"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewIdade"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMail"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/editTextIdade"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
         android:id="@+id/editTextIdade"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/editTextPeso"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewIdade"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/idade"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPeso"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPeso"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/peso"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAltura"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextPeso"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editTextAltura"
@@ -58,115 +146,35 @@
         android:id="@+id/editTextAltura"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
         android:layout_marginBottom="244dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextMail"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="40dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/editTextIdade"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/EditTextPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="40dp"
-        android:ems="10"
-        android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/editTextMail"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewNome"
-        android:layout_width="70dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:text="@string/nome"
-        app:layout_constraintBottom_toTopOf="@+id/textViewTelefone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688" />
-
-    <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_width="70dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/email"
-        app:layout_constraintBottom_toTopOf="@+id/textViewIdade"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewIdade"
-        android:layout_width="70dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/idade"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPeso"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewPeso"
-        android:layout_width="70dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/peso"
-        app:layout_constraintBottom_toTopOf="@+id/textViewAltura"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/textViewAltura"
         android:layout_width="70dp"
         android:layout_height="32dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
         android:layout_marginBottom="244dp"
         android:text="@string/altura"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewTelefone"
-        android:layout_width="70dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/telefone"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEmail"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView7"
+    <Button
+        android:id="@+id/buttonEnviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Dados do Utilizador"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginBottom="164dp"
+        android:text="@string/enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

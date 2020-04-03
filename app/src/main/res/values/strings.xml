@@ -6,4 +6,6 @@
     <string name="peso">Peso</string>
     <string name="altura">Altura</string>
     <string name="telefone">Telefone</string>
+    <string name="dados_do_utilizador">Dados do Utilizador</string>
+    <string name="enviar">Enviar</string>
 </resources>
