@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ExDados</string>
+    <string name="nome">Nome</string>
+    <string name="email">Email</string>
+    <string name="idade">Idade</string>
+    <string name="peso">Peso</string>
+    <string name="altura">Altura</string>
+    <string name="telefone">Telefone</string>
+</resources>
